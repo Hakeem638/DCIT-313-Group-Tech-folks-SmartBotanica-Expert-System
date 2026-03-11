@@ -14,7 +14,7 @@ SmartBotanica is a Prolog-based expert system that diagnoses plant diseases from
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 SmartBotanica/
@@ -35,7 +35,7 @@ SmartBotanica/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js (v18+)
@@ -70,17 +70,17 @@ Then open your browser at `http://localhost:5173`
 
 | Name | Student ID | Role | Responsibilities |
 |------|-----------|------|-----------------|
-| 🧠 **Haruna Hakeem** | 22046736 | Project Manager | Project planning, coordination, and delivery oversight |
-| 💻 **Mubarack Jibriel** | 22146249 | Knowledge Base Engineer | Prolog rule design, Python/PySwip bridge, Flask API |
-| ⚙️ **Emmanuel Sarfo Attah-Nimoh** | 22041547 | Knowledge Base Engineer | React UI, Tailwind design, Knowledge Engineering docs |
-| 🎨 **Israel Opoku-Agyemang** | 22055310 | Programmer | System integration, testing and debugging |
-| 🔧 **Obeng Jessica Afriyie** | 22051539 | Programmer | Frontend components and user experience design |
-| 📝 **Osman Umar Farouk** | 22245576 | Programmer | Backend development and API integration |
-| 🌱 **Esther Eyram Ahiable** | 22155267 | Programmer | Documentation, test cases and knowledge acquisition |
+|  **Haruna Hakeem** | 22046736 | Project Manager | Project planning, coordination, and delivery oversight |
+|  **Mubarack Jibriel** | 22146249 | Knowledge Base Engineer | Prolog rule design, Python/PySwip bridge, Flask API |
+|  **Emmanuel Sarfo Attah-Nimoh** | 22041547 | Knowledge Base Engineer | React UI, Tailwind design, Knowledge Engineering docs |
+|  **Israel Opoku-Agyemang** | 22055310 | Programmer | System integration, testing and debugging |
+|  **Obeng Jessica Afriyie** | 22051539 | Programmer | Frontend components and user experience design |
+|  **Osman Umar Farouk** | 22245576 | Programmer | Backend development and API integration |
+|  **Esther Eyram Ahiable** | 22155267 | Programmer | Documentation, test cases and knowledge acquisition |
 
 ---
 
-## 🛠️ Tech Stack
+##   Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -90,6 +90,6 @@ Then open your browser at `http://localhost:5173`
 
 ---
 
-## 📄 License
+##   License
 
 This project was developed for academic purposes at the University of Ghana.
