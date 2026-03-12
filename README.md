@@ -50,9 +50,23 @@ cd DCIT-313-Group-Tech-folks-SmartBotanica-Expert-System
 
 ### 2. Run the Backend
 ```bash
+Backend Setup
+
+ 1. Navigate to project root
 cd interface
-pip install -r requirements.txt
-python app.py
+ 2. Create virtual environment (first time only)
+python -m venv venv
+
+ 3. Activate virtual environment
+venv\Scripts\activate
+ Prompt shows (venv)
+
+ 4. Install Python dependencies
+pip install -r interface/requirements.txt
+
+ 5. Run Flask backend
+python interface/app.py
+Backend runs at http://localhost:5000
 ```
 
 ### 3. Run the Frontend
