@@ -82,15 +82,15 @@ Then open your browser at `http://localhost:5173`
 
 ## 👥 Team Members
 
-| Name | Student ID | Role | Responsibilities |
-|------|-----------|------|-----------------|
-|  **Haruna Hakeem** | 22046736 | Project Manager | Project planning, coordination, and delivery oversight |
-|  **Mubarack Jibriel** | 22146249 | Knowledge Base Engineer | Prolog rule design, Python/PySwip bridge, Flask API |
-|  **Emmanuel Sarfo Attah-Nimoh** | 22041547 | Knowledge Base Engineer | React UI, Tailwind design, Knowledge Engineering docs |
-|  **Israel Opoku-Agyemang** | 22055310 | Programmer | System integration, testing and debugging |
-|  **Obeng Jessica Afriyie** | 22051539 | Programmer | Frontend components and user experience design |
-|  **Osman Umar Farouk** | 22245576 | Programmer | Backend development and API integration |
-|  **Esther Eyram Ahiable** | 22155267 | Programmer | Documentation, test cases and knowledge acquisition |
+| Name | Student ID | Role |
+|------|-----------|------|
+|  **Haruna Hakeem** | 22046736 | Project Manager |
+|  **Mubarack Jibriel** | 22146249 | Knowledge Base Engineer | 
+|  **Emmanuel Sarfo Attah-Nimoh** | 22041547 | Knowledge Base Engineer | 
+|  **Israel Opoku-Agyemang** | 22055310 | Programmer | 
+|  **Obeng Jessica Afriyie** | 22051539 | Programmer | 
+|  **Osman Umar Farouk** | 22245576 | Programmer | 
+|  **Esther Eyram Ahiable** | 22155267 | Programmer | 
 
 ---
 
