@@ -21,23 +21,28 @@ const CATEGORY_COLORS = {
 export default function RulesPage({ onBack }) {
   return (
     <div>
-      <button onClick={onBack} className="flex items-center gap-2 text-sm font-semibold text-[#4a7c59] hover:text-[#2c4a2e] mb-6 transition-colors">
+      <button onClick={onBack} className="flex items-center gap-2 text-sm font-semibold text-[var(--sb-primary)] hover:text-[var(--sb-primary-dark)] mb-6 transition-colors">
         ← Back to Diagnosis
       </button>
 
       <div className="mb-8">
-        <p className="text-[10px] font-bold uppercase tracking-widest text-[#4a7c59] mb-1">Knowledge Base</p>
-        <h2 className="font-display text-4xl text-[#2c1810]">All Prolog Rules</h2>
-        <p className="text-sm text-[#7a6652] mt-1">
-          10 production rules stored in <code className="bg-[#f0e8d8] px-1.5 py-0.5 rounded text-xs">/knowledge_base/smartbotanica.pl</code> — the intelligence of the system
+        <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sb-primary)] mb-1">Knowledge Base</p>
+        <h2 className="font-display text-4xl text-[var(--sb-text)]">All Prolog Rules</h2>
+        <p className="text-sm text-[var(--sb-text-soft)] mt-1">
+          10 production rules stored in <code className="bg-[#eef5ef] px-1.5 py-0.5 rounded text-xs">/knowledge_base/smartbotanica.pl</code> — the intelligence of the system
         </p>
       </div>
 
       {/* Architecture note */}
-      <div className="bg-[#2c4a2e] text-white rounded-2xl p-5 mb-8 flex items-start gap-4">
+      <div className="bg-[var(--sb-primary-dark)] text-white rounded-2xl p-5 mb-8 flex items-start gap-4 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-25"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?auto=format&fit=crop&w=1200&q=80')" }}
+        />
+        <div className="absolute inset-0 leaf-photo-overlay" />
         <div className="text-3xl">🧠</div>
-        <div>
-          <p className="font-semibold text-[#a8d5a2] text-sm mb-1">KBS Separation of Concerns</p>
+        <div className="relative z-10">
+          <p className="font-semibold text-[var(--sb-accent)] text-sm mb-1">KBS Separation of Concerns</p>
           <p className="text-xs text-white/70 leading-relaxed">
             All intelligence is stored as logical rules in SWI-Prolog — NOT hard-coded in Python if-else statements.
             The Python (pyswip) layer only passes facts and retrieves conclusions. This is the correct KBS architecture.
@@ -47,33 +52,33 @@ export default function RulesPage({ onBack }) {
 
       <div className="grid gap-4">
         {RULES.map(rule => (
-          <div key={rule.id} className="bg-white rounded-2xl border border-[#d4c4a8] overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#f0e8d8]">
+          <div key={rule.id} className="bg-white rounded-2xl border border-[var(--sb-border)] overflow-hidden shadow-sm">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#edf3ee]">
               <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-xl bg-[#2c4a2e] text-[#a8d5a2] flex items-center justify-center font-bold text-sm">{rule.id}</span>
+                <span className="w-10 h-10 rounded-xl bg-[var(--sb-primary-dark)] text-[var(--sb-accent)] flex items-center justify-center font-bold text-sm">{rule.id}</span>
                 <div>
-                  <h3 className="font-semibold text-[#2c1810]">{rule.name}</h3>
+                  <h3 className="font-semibold text-[var(--sb-text)]">{rule.name}</h3>
                   <span className={`text-[10px] font-bold uppercase tracking-wider border px-2 py-0.5 rounded-full ${CATEGORY_COLORS[rule.category]}`}>
                     {rule.category}
                   </span>
                 </div>
               </div>
             </div>
-            <div className="grid sm:grid-cols-2 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-[#f0e8d8]">
+            <div className="grid sm:grid-cols-2 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-[#edf3ee]">
               <div className="px-6 py-4">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-[#4a7c59] mb-2">Conditions (IF)</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sb-primary)] mb-2">Conditions (IF)</p>
                 <div className="space-y-1">
                   {rule.conditions.map((c, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#4a7c59] flex-shrink-0"></span>
-                      <code className="text-xs text-[#2c1810] font-mono">{c}</code>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--sb-primary)] flex-shrink-0"></span>
+                      <code className="text-xs text-[var(--sb-text)] font-mono">{c}</code>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="px-6 py-4 bg-[#1a2e1c]">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-[#a8d5a2] mb-2">Prolog Rule</p>
-                <pre className="text-xs text-[#7fd8a0] font-mono leading-6 whitespace-pre-wrap">{rule.prolog}</pre>
+              <div className="px-6 py-4 bg-[#183625]">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sb-accent)] mb-2">Prolog Rule</p>
+                <pre className="text-xs text-[#8be0ad] font-mono leading-6 whitespace-pre-wrap">{rule.prolog}</pre>
               </div>
             </div>
           </div>

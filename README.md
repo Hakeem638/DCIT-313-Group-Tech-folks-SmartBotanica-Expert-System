@@ -1,80 +1,109 @@
-# DCIT313-SmartBotanica-Expert-System
+# 🌿 SmartBotanica Expert System
 
-**Course:** DCIT 313 — Knowledge-Based Systems · University of Ghana
+> An AI-powered expert system to detect plant diseases and suggest their cure.
 
-
-
-## System Description
-
-**SmartBotanica** is a plant disease diagnosis expert system. It maps user-provided observations (perceptions) to plant disease diagnoses and treatment recommendations (actions) using symbolic AI and logical inference.
+**Course:** DCIT 313 — Artificial Intelligence  
+**Group:** Tech Folks  
+**Institution:** University of Ghana
 
 ---
 
-## Tech Stack
+## 📖 About
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| Logic Engine | SWI-Prolog | Symbolic AI & Inference (Forward Chaining) |
-| Backend Bridge | Python + pyswip + Flask | Connects UI to Prolog knowledge base |
-| Frontend | React + Tailwind CSS | User Interface |
+SmartBotanica is a Prolog-based expert system that diagnoses plant diseases from user-provided symptoms and recommends appropriate treatments. It features a conversational step-by-step interface built with React and a Flask API backend that bridges the frontend to the Prolog knowledge base via PySwip.
 
 ---
 
-## Repository Structure
+## Project Structure
 
 ```
-DCIT313-SmartBotanica/
-├── knowledge_base/
-│   └── smartbotanica.pl       ← All Prolog facts and rules
-├── interface/
-│   ├── app.py                 ← Flask API (pyswip bridge to Prolog)
-│   └── requirements.txt
-├── frontend/
+SmartBotanica/
+├── frontend/          # React + Tailwind CSS user interface
 │   ├── src/
+│   │   ├── components/   # UI components (Stepper, Sidebar, ResultPanel, etc.)
 │   │   ├── App.jsx
-│   │   ├── components/
-│   │   │   ├── Header.jsx
-│   │   │   ├── Sidebar.jsx
-│   │   │   ├── Stepper.jsx
-│   │   │   └── ResultPanel.jsx
-│   │   └── index.css
-│   └── package.json
-├── docs/                      ← Knowledge Engineering report
-└── README.md
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+├── interface/         # Flask API backend
+│   ├── app.py
+│   └── requirements.txt
+├── knowledge_base/    # Prolog knowledge base
+│   └── smartbotanica.pl
+└── docs/              # Project documentation
 ```
 
 ---
 
-## How to Run
+##  Getting Started
 
 ### Prerequisites
-- SWI-Prolog installed → https://www.swi-prolog.org/Download.html
-- Python 3.8+ installed
-- Node.js 18+ installed
+- Node.js (v18+)
+- Python (v3.8+)
+- SWI-Prolog
 
-### Terminal 1 — Backend
+### 1. Clone the Repository
 ```bash
-cd interface
-pip install -r requirements.txt
-python app.py
+git clone https://github.com/Hakeem638/DCIT-313-Group-Tech-folks-SmartBotanica-Expert-System.git
+cd DCIT-313-Group-Tech-folks-SmartBotanica-Expert-System
 ```
 
-### Terminal 2 — Frontend
+### 2. Run the Backend
+```bash
+Backend Setup
+
+ 1. Navigate to project root
+cd interface
+ 2. Create virtual environment (first time only)
+python -m venv venv
+
+ 3. Activate virtual environment
+venv\Scripts\activate
+ Prompt shows (venv)
+
+ 4. Install Python dependencies
+pip install -r interface/requirements.txt
+
+ 5. Run Flask backend
+python interface/app.py
+Backend runs at http://localhost:5000
+```
+
+### 3. Run the Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Open **http://localhost:3000** in your browser.
+Then open your browser at `http://localhost:5173`
 
 ---
 
-## Test Cases
+## 👥 Team Members
 
-| Input | Expected Output |
-|-------|----------------|
-| leaf_spots=brown, humidity=high | Fungal Blight |
-| soil_moisture=dry, plant_wilting=yes | Drought Stress |
-| leaf_color=yellow, soil_moisture=normal | Nitrogen Deficiency |
-| leaf_color=yellow, soil_moisture=wet, root_smell=foul | Root Rot |
+| Name | Student ID | Role |
+|------|-----------|------|
+|  **Haruna Hakeem** | 22046736 | Project Manager |
+|  **Mubarack Jibriel** | 22146249 | Knowledge Base Engineer | 
+|  **Emmanuel Sarfo Attah-Nimoh** | 22041547 | Knowledge Base Engineer | 
+|  **Israel Opoku-Agyemang** | 22055310 | Programmer | 
+|  **Obeng Jessica Afriyie** | 22051539 | Programmer | 
+|  **Osman Umar Farouk** | 22245576 | Programmer | 
+|  **Esther Eyram Ahiable** | 22155267 | Programmer | 
+
+---
+
+##   Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React, Vite, Tailwind CSS |
+| Backend | Python, Flask |
+| Knowledge Base | SWI-Prolog, PySwip |
+
+---
+
+##   License
+
+This project was developed for academic purposes at the University of Ghana.

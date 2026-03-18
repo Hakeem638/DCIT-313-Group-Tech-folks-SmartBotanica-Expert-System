@@ -1,8 +1,3 @@
-"""
-SmartBotanica Expert System — Flask Backend
-Authors: Mubarack Jibriel & Emmanuel Sarfo Attah-Nimoh
-Course:  DCIT 313
-"""
 
 import os
 from flask import Flask, request, jsonify

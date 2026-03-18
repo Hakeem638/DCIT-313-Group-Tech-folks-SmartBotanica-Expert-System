@@ -4,10 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sb-bg: #edf4ee;
+  --sb-surface: #ffffff;
+  --sb-surface-soft: #f5faf6;
+  --sb-border: #cfe3d3;
+  --sb-text: #1d3a29;
+  --sb-text-soft: #5f7a67;
+  --sb-primary: #2f7a4a;
+  --sb-primary-dark: #215c38;
+  --sb-accent: #8fd6a8;
+}
+
 @layer base {
   body {
     font-family: 'DM Sans', sans-serif;
-    background-color: #f5efe6;
+    background-color: var(--sb-bg);
+    color: var(--sb-text);
   }
   h1, h2, h3 {
     font-family: 'Playfair Display', serif;
@@ -17,5 +30,15 @@
 @layer utilities {
   .font-display {
     font-family: 'Playfair Display', serif;
+  }
+
+  .leaf-photo-overlay {
+    background-image: linear-gradient(135deg, rgba(29, 58, 41, 0.72), rgba(47, 122, 74, 0.42));
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 }

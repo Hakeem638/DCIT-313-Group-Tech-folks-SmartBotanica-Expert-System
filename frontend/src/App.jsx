@@ -57,20 +57,64 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5efe6]">
+    <div className="min-h-screen bg-[var(--sb-bg)] text-[var(--sb-text)]">
       <Header onNav={setPage} currentPage={page} />
-      <main className="max-w-5xl mx-auto px-4 py-8">
+      <main className="w-full max-w-[1600px] mx-auto px-4 md:px-6 xl:px-8 py-8">
 
         {page === "home" && (
-          <div className="flex gap-6 items-start">
-            <Sidebar steps={STEPS} currentStep={currentStep} answers={answers} />
-            <div className="flex-1 bg-white rounded-2xl shadow-sm border border-[#d4c4a8] p-8">
-              <Stepper
-                steps={STEPS} currentStep={currentStep} answers={answers}
-                onSelect={handleSelect} onNext={handleNext} onBack={handleBack}
-                onDiagnose={handleDiagnose} loading={loading} error={error}
-                isLastStep={isLastStep} allAnswered={allAnswered}
-              />
+          <div className="space-y-6">
+            <section className="rounded-[28px] overflow-hidden border border-[var(--sb-border)] bg-[var(--sb-surface)] shadow-sm">
+              <div
+                className="relative min-h-[340px] md:min-h-[400px] xl:min-h-[440px] bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1800&q=80')",
+                }}
+              >
+                <div className="absolute inset-0 leaf-photo-overlay" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/10" />
+                <div className="relative z-10 grid lg:grid-cols-[minmax(0,1.4fr)_360px] gap-6 h-full p-6 md:p-8 xl:p-10 items-end">
+                  <div className="max-w-3xl space-y-4 self-end">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/90">
+                      🌿 Smart Diagnosis Experience
+                    </span>
+                    <div className="space-y-3">
+                      <h2 className="font-display text-white text-4xl md:text-5xl xl:text-6xl leading-[1.05]">
+                        A modern plant diagnosis website powered by Prolog inference
+                      </h2>
+                      <p className="max-w-2xl text-sm md:text-base text-white/80 leading-relaxed">
+                        Capture symptoms step by step, evaluate knowledge-base rules instantly, and get focused treatment recommendations in a cleaner, more professional interface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 md:gap-4 lg:self-end">
+                    {[
+                      { label: "Rules", value: "10" },
+                      { label: "Inputs", value: "10" },
+                      { label: "Categories", value: "4" },
+                      { label: "Inference", value: "Live" },
+                    ].map((stat) => (
+                      <div key={stat.label} className="glass-panel border border-white/15 rounded-2xl p-4 text-white shadow-lg">
+                        <p className="text-2xl md:text-3xl font-display">{stat.value}</p>
+                        <p className="text-[11px] uppercase tracking-[0.18em] text-white/70 mt-1">{stat.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div className="grid grid-cols-1 xl:grid-cols-[20rem_minmax(0,1fr)] gap-6 items-start">
+              <Sidebar steps={STEPS} currentStep={currentStep} answers={answers} />
+              <div className="flex-1 bg-[var(--sb-surface)] rounded-[28px] shadow-sm border border-[var(--sb-border)] p-6 md:p-8 xl:p-10">
+                <Stepper
+                  steps={STEPS} currentStep={currentStep} answers={answers}
+                  onSelect={handleSelect} onNext={handleNext} onBack={handleBack}
+                  onDiagnose={handleDiagnose} loading={loading} error={error}
+                  isLastStep={isLastStep} allAnswered={allAnswered}
+                />
+              </div>
             </div>
           </div>
         )}

@@ -1,11 +1,5 @@
-% ============================================================
-%  SmartBotanica Expert System — Knowledge Base
-%  Authors: Mubarack Jibriel & Emmanuel Sarfo Attah-Nimoh
-%  Course:  DCIT 313
-%  Inference: Forward Chaining via Prolog unification
-% ============================================================
 
-% ── DISEASE DIAGNOSIS RULES ─────────────────────────────────
+% ── DISEASE DIAGNOSIS RULES 
 
 diagnosis(root_rot) :-
     leaf_color(yellow),
@@ -24,7 +18,7 @@ diagnosis(powdery_mildew) :-
     leaf_spots(white),
     humidity(high).
 
-% ── NUTRIENT DEFICIENCY RULES ───────────────────────────────
+% ── NUTRIENT DEFICIENCY RULES
 
 diagnosis(nitrogen_deficiency) :-
     leaf_color(yellow),
@@ -34,7 +28,7 @@ diagnosis(iron_deficiency) :-
     leaf_color(yellow),
     leaf_spots(none).
 
-% ── ENVIRONMENTAL STRESS RULES ──────────────────────────────
+% ── ENVIRONMENTAL STRESS RULES 
 
 diagnosis(heat_stress) :-
     plant_wilting(yes),
@@ -44,7 +38,7 @@ diagnosis(drought_stress) :-
     soil_moisture(dry),
     plant_wilting(yes).
 
-% ── PEST INFESTATION RULES ──────────────────────────────────
+% ── PEST INFESTATION RULES 
 
 diagnosis(aphid_infestation) :-
     pests_visible(yes),
@@ -54,7 +48,7 @@ diagnosis(spider_mites) :-
     pests_visible(yes),
     leaf_spots(brown).
 
-% ── TREATMENT RECOMMENDATIONS ───────────────────────────────
+% ── TREATMENT RECOMMENDATIONS 
 
 treatment(root_rot, "Reduce watering immediately and allow soil to dry. Remove the plant, trim any black or mushy roots, and repot in fresh well-draining soil. Apply a fungicide drench if infection is severe.").
 treatment(fungal_blight, "Apply a broad-spectrum fungicide. Improve air circulation by pruning dense foliage. Avoid overhead watering and reduce humidity where possible.").
@@ -67,7 +61,7 @@ treatment(drought_stress, "Water the plant thoroughly and immediately. Apply mul
 treatment(aphid_infestation, "Spray with a strong jet of water to dislodge aphids. Apply insecticidal soap or neem oil. Introduce natural predators like ladybirds if possible. Repeat every 5-7 days.").
 treatment(spider_mites, "Increase humidity — spider mites thrive in dry conditions. Spray with water then apply miticide or neem oil. Remove and dispose of heavily infested leaves.").
 
-% ── CATEGORY LABELS ─────────────────────────────────────────
+% ── CATEGORY LABELS 
 
 category(root_rot,            "Disease").
 category(fungal_blight,       "Disease").
