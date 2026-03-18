@@ -20,7 +20,7 @@ function DiagnosisCard({ diagnosis }) {
         </div>
       </div>
       <div className="bg-white px-6 py-5">
-        <p className="text-[10px] font-bold uppercase tracking-widest text-[#4a7c59] mb-3">Recommended Treatment</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sb-primary)] mb-3">Recommended Treatment</p>
         <div className={`${s.light} border-l-4 ${s.border} rounded-r-xl px-4 py-3 text-sm leading-relaxed ${s.text} font-medium`}>
           {diagnosis.treatment}
         </div>
@@ -34,33 +34,33 @@ export default function ResultPanel({ result, answers, steps, onReset }) {
   const diagnoses = result.diagnoses || [];
 
   return (
-    <div className="flex gap-6 items-start">
+    <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_19rem] gap-6 items-start">
       <div className="flex-1 min-w-0">
 
         {/* KBS Architecture Badge */}
-        <div className="flex items-center gap-3 bg-[#2c4a2e] text-white rounded-xl px-4 py-3 mb-6">
+        <div className="flex items-center gap-3 bg-[var(--sb-primary-dark)] text-white rounded-2xl px-5 py-4 mb-6 shadow-sm">
           <span className="text-xl">🧠</span>
           <div>
-            <p className="text-xs font-bold text-[#a8d5a2]">KBS Architecture — Correct Separation</p>
+            <p className="text-xs font-bold text-[var(--sb-accent)]">KBS Architecture — Correct Separation</p>
             <p className="text-[10px] text-white/60">Intelligence stored in SWI-Prolog rules · Python (pyswip) acts only as bridge · No if-else logic in Python</p>
           </div>
         </div>
 
         <div className="mb-6">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[#4a7c59] mb-1">Diagnosis Complete</p>
-          <h2 className="font-display text-4xl text-[#2c1810]">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sb-primary)] mb-1">Diagnosis Complete</p>
+          <h2 className="font-display text-4xl text-[var(--sb-text)]">
             {diagnoses.length > 0 ? `${diagnoses.length} condition${diagnoses.length > 1 ? "s" : ""} found` : "No match found"}
           </h2>
-          <p className="text-sm text-[#7a6652] mt-1">Results produced by SWI-Prolog forward chaining</p>
+          <p className="text-sm text-[var(--sb-text-soft)] mt-1">Results produced by SWI-Prolog forward chaining</p>
         </div>
 
         {diagnoses.length > 0
           ? diagnoses.map(d => <DiagnosisCard key={d.disease} diagnosis={d} />)
           : (
-            <div className="bg-white rounded-2xl border-2 border-[#d4c4a8] p-10 text-center mb-5">
+            <div className="bg-white rounded-2xl border-2 border-[var(--sb-border)] p-10 text-center mb-5">
               <div className="text-5xl mb-4">🔍</div>
-              <h3 className="font-display text-2xl text-[#2c1810] mb-2">No Diagnosis Found</h3>
-              <p className="text-sm text-[#7a6652] max-w-sm mx-auto">The symptoms entered did not match any condition in the knowledge base. Try again or consult an agricultural expert.</p>
+              <h3 className="font-display text-2xl text-[var(--sb-text)] mb-2">No Diagnosis Found</h3>
+              <p className="text-sm text-[var(--sb-text-soft)] max-w-sm mx-auto">The symptoms entered did not match any condition in the knowledge base. Try again or consult an agricultural expert.</p>
             </div>
           )
         }
@@ -69,13 +69,13 @@ export default function ResultPanel({ result, answers, steps, onReset }) {
         <div className="mb-6">
           <button
             onClick={() => setShowTrace(v => !v)}
-            className="text-sm font-semibold text-[#4a7c59] flex items-center gap-2 hover:text-[#2c4a2e] transition-colors"
+            className="text-sm font-semibold text-[var(--sb-primary)] flex items-center gap-2 hover:text-[var(--sb-primary-dark)] transition-colors"
           >
             <span>{showTrace ? "▼" : "▶"}</span>
             {showTrace ? "Hide" : "Show"} Prolog Inference Trace
           </button>
           {showTrace && (
-            <div className="mt-3 bg-[#1a2e1c] text-[#a8d5a2] font-mono text-xs rounded-2xl p-5 leading-7 whitespace-pre-wrap">
+            <div className="mt-3 bg-[#183625] text-[var(--sb-accent)] font-mono text-xs rounded-2xl p-5 leading-7 whitespace-pre-wrap">
 {`=== SmartBotanica Prolog Inference Engine ===
 
 Working Memory (Asserted Facts):
@@ -94,24 +94,28 @@ ${diagnoses.length === 0 ? "[NO RULES FIRED] No conditions matched the working m
           )}
         </div>
 
-        <button onClick={onReset} className="px-6 py-3 rounded-xl bg-[#f5efe6] border-2 border-[#d4c4a8] text-[#7a6652] font-semibold hover:bg-[#ede3d4] transition-colors">
+        <button onClick={onReset} className="px-6 py-3 rounded-xl bg-[var(--sb-surface-soft)] border-2 border-[var(--sb-border)] text-[var(--sb-text-soft)] font-semibold hover:bg-[#eaf4ec] transition-colors">
           🔄 New Diagnosis
         </button>
       </div>
 
       {/* Observations sidebar */}
-      <aside className="w-56 shrink-0 bg-[#2c4a2e] text-white rounded-2xl p-5 sticky top-24">
-        <div className="w-full h-28 rounded-xl bg-[#1e3320] flex items-center justify-center mb-4 relative overflow-hidden">
-          <span className="text-5xl">🌿</span>
-          <span className="absolute bottom-1 left-2 text-2xl">🌱</span>
-          <span className="absolute top-1 right-2 text-xl opacity-50">🍀</span>
+      <aside className="w-full xl:w-[19rem] shrink-0 bg-[var(--sb-primary-dark)] text-white rounded-[28px] p-5 md:p-6 self-start xl:sticky xl:top-28 shadow-sm">
+        <div
+          className="w-full h-36 rounded-2xl mb-4 relative overflow-hidden bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1463320898484-cdee8141c787?auto=format&fit=crop&w=1000&q=80')",
+          }}
+        >
+          <div className="absolute inset-0 leaf-photo-overlay" />
+          <div className="absolute bottom-2 left-2 text-[10px] tracking-wide uppercase text-white/90 font-semibold">Field Snapshot</div>
         </div>
-        <p className="text-[10px] font-bold uppercase tracking-widest text-[#a8d5a2] mb-3">Your Observations</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sb-accent)] mb-3">Your Observations</p>
         <div className="space-y-2">
           {steps.map(s => answers[s.attr] ? (
             <div key={s.attr} className="flex justify-between items-center gap-2">
               <span className="text-[10px] text-white/50 uppercase tracking-wide shrink-0">{s.label}</span>
-              <span className="text-xs font-semibold text-[#a8d5a2] capitalize text-right">{answers[s.attr].replace(/_/g," ")}</span>
+              <span className="text-xs font-semibold text-[var(--sb-accent)] capitalize text-right">{answers[s.attr].replace(/_/g," ")}</span>
             </div>
           ) : null)}
         </div>
