@@ -9,7 +9,6 @@ const SOURCES = [
 ];
 
 const TEAM = [
-<<<<<<< Updated upstream
   { name:"Haruna Hakeem",              id:"22046736", role:"Project Manager",          emoji:"👑", color:"from-yellow-400 to-orange-400",  tasks:"Project planning, coordination, and delivery oversight", image:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80", focus:"Leadership & Planning" },
   { name:"Mubarack Jibriel",           id:"22146249", role:"Knowledge Base Engineer",  emoji:"🧠", color:"from-green-500 to-emerald-600",  tasks:"Prolog rule design, Python/pyswip bridge, Flask API", image:"https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=900&q=80", focus:"AI Rules & Inference" },
   { name:"Emmanuel Sarfo Attah-Nimoh", id:"22041547", role:"Knowledge Base Engineer",  emoji:"💻", color:"from-blue-500 to-indigo-600",    tasks:"React UI, Tailwind design, Knowledge Engineering docs", image:"https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80", focus:"Frontend & Knowledge Design" },
@@ -44,7 +43,6 @@ const MEDIA = [
     type: "video/mp4",
     poster: "https://images.unsplash.com/photo-1487798452839-c748a707a6b2?auto=format&fit=crop&w=900&q=80",
   },
-=======
   { name:"Haruna Hakeem",              id:"22046736", role:"Project Manager",          emoji:"👑", color:"from-yellow-400 to-orange-400",  tasks:"Project planning, coordination, and delivery oversight" },
   { name:"Mubarack Jibriel",           id:"22146249", role:"Knowledge Base Engineer",  emoji:"🧠", color:"from-green-500 to-emerald-600",  tasks:"Prolog rule design, Python/pyswip bridge, Flask API" },
   { name:"Emmanuel Sarfo Attah-Nimoh", id:"22041547", role:"Knowledge Base Engineer",  emoji:"💻", color:"from-blue-500 to-indigo-600",    tasks:"React UI, Tailwind design, Knowledge Engineering docs" },
@@ -52,7 +50,6 @@ const MEDIA = [
   { name:"Obeng Jessica Afriyie",      id:"22051539", role:"Programmer",               emoji:"🎨", color:"from-pink-500 to-rose-500",      tasks:"Frontend components and user experience design" },
   { name:"Osman Umar Farouk",          id:"22245576", role:"Programmer",               emoji:"🔧", color:"from-cyan-500 to-teal-600",      tasks:"Backend development and API integration" },
   { name:"Esther Eyram Ahiable",       id:"22155267", role:"Programmer",               emoji:"📝", color:"from-amber-500 to-yellow-500",   tasks:"Documentation, test cases and knowledge acquisition" },
->>>>>>> Stashed changes
 ];
 
 const STATS = [
@@ -70,7 +67,6 @@ export default function AboutPage({ onBack }) {
       </button>
 
       {/* Hero Banner */}
-<<<<<<< Updated upstream
       <div className="text-white rounded-3xl p-8 mb-6 relative overflow-hidden bg-[var(--sb-primary-dark)]">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
@@ -143,7 +139,6 @@ export default function AboutPage({ onBack }) {
                   <code className="text-[10px] bg-black/40 px-2 py-1 rounded text-white/90 block w-fit border border-white/20 backdrop-blur-sm">{a.tech}</code>
                   <p className="text-xs text-white/85 leading-relaxed">{a.desc}</p>
                 </div>
-=======
       <div className="bg-[#2c4a2e] text-white rounded-3xl p-8 mb-6 relative overflow-hidden">
         <div className="absolute -right-4 -top-4 text-9xl opacity-10 select-none">🌿</div>
         <div className="absolute right-16 bottom-2 text-5xl opacity-10 select-none">🌱</div>
@@ -221,14 +216,12 @@ export default function AboutPage({ onBack }) {
                 </div>
                 <p className="text-[10px] font-bold uppercase tracking-wide text-[#4a7c59] mb-1">{m.role}</p>
                 <p className="text-xs text-[#7a6652] leading-relaxed">{m.tasks}</p>
->>>>>>> Stashed changes
               </div>
             </div>
           ))}
         </div>
       </div>
 
-<<<<<<< Updated upstream
       {/* Team */}
       <div className="bg-white rounded-3xl border border-[var(--sb-border)] p-6 mb-6">
         <div className="flex items-center gap-2 mb-5">
@@ -259,7 +252,6 @@ export default function AboutPage({ onBack }) {
                   <span className="text-[10px] font-semibold text-[var(--sb-text-soft)]">SmartBotanica Team</span>
                   <span className="text-[10px] px-2 py-1 rounded-full bg-[#eaf4ec] text-[var(--sb-primary-dark)] font-semibold">Active</span>
                 </div>
-=======
       {/* Knowledge Sources */}
       <div className="bg-white rounded-2xl border border-[#d4c4a8] p-6">
         <div className="flex items-center gap-2 mb-5">
@@ -273,14 +265,12 @@ export default function AboutPage({ onBack }) {
               <div>
                 <p className="font-semibold text-sm text-[#2c1810]">{s.name}</p>
                 <p className="text-xs text-[#7a6652] leading-relaxed">{s.desc}</p>
->>>>>>> Stashed changes
               </div>
             </div>
           ))}
         </div>
       </div>
 
-<<<<<<< Updated upstream
       {/* Plant Media */}
       <div className="bg-white rounded-3xl border border-[var(--sb-border)] p-6 mb-6">
         <div className="flex items-center gap-2 mb-5">
@@ -340,8 +330,6 @@ export default function AboutPage({ onBack }) {
         </div>
       </div>
 
-=======
->>>>>>> Stashed changes
     </div>
   );
 }
