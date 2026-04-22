@@ -14,8 +14,6 @@ SmartBotanica is a Prolog-based expert system that diagnoses plant diseases from
 
 ---
 
-## Project Structure
-=======
 ## 🗂️ Project Structure
 
 ```
@@ -37,10 +35,7 @@ SmartBotanica/
 
 ---
 
-##  Getting Started
-=======
 ## 🚀 Getting Started
->>>>>>> Stashed changes
 
 ### Prerequisites
 - Node.js (v18+)
@@ -49,20 +44,11 @@ SmartBotanica/
 
 ### 1. Clone the Repository
 
-=======
 ```bash
 git clone https://github.com/Hakeem638/DCIT-313-Group-Tech-folks-SmartBotanica-Expert-System.git
 cd DCIT-313-Group-Tech-folks-SmartBotanica-Expert-System
 ```
 
-### 2. Run the Backend
-
-```bash
-git clone https://github.com/Hakeem638/DCIT-313-Group-Tech-folks-SmartBotanica-Expert-System.git
-cd DCIT-313-Group-Tech-folks-SmartBotanica-Expert-System
-```
-
-<<<<<<< Updated upstream
 ### 2. Run the Backend
 ```bash
 Backend Setup
@@ -83,8 +69,6 @@ pip install -r interface/requirements.txt
 python interface/app.py
 Backend runs at http://localhost:5000
 ```
-
-=======
 
 ### 3. Run the Frontend
 ```bash
@@ -124,8 +108,5 @@ Then open your browser at `http://localhost:5173`
 ##   License
 
 This project was developed for academic purposes at the University of Ghana.
-=======
-## 📄 License
 
-This project was developed for academic purposes at the University of Ghana.
 
