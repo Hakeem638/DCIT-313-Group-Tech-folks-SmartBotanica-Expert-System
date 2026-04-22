@@ -100,7 +100,7 @@ Then open your browser at `http://localhost:5173`
 | Layer | Technology |
 |-------|-----------|
 | Frontend | React, Vite, Tailwind CSS |
-| Backend | Python, Flask |
+| Backend | Python |
 | Knowledge Base | SWI-Prolog, PySwip |
 
 ---
